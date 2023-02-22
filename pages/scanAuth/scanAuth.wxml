@@ -1,0 +1,10 @@
+<!--pages/scanAuth/scanAuth.wxml-->
+<form bindsubmit="sendAuth">
+  <div class="container">
+    <text style="font-size: x-large; ">您将要使用扫码登录蜃境</text>
+    <text style="font-size:medium;padding-top: 1rem;"> 请注意校验下方核验码！</text>
+    <text style="font-size: xx-large; color: red; padding-top: 5rem;">{{stateCode}}</text>
+    <button bindtap="cancelAuth" style="margin-top: 14rem;">取消</button>
+    <button type="primary" style="margin-top: 2rem;" form-type="submit">确认</button>
+  </div>
+</form>

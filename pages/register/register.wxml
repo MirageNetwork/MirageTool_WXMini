@@ -1,0 +1,13 @@
+<!--pages/register/register.wxml-->
+<form bindsubmit="addUserToServer">
+<div class="container">
+  <text style="font-size: x-large;">添加蜃境用户信息</text>
+ {{ niceName }}
+<image name="avatarURL" class="avatar" style="width: 25%;" mode="aspectFit" src="{{avatarUrl}}"></image>
+<button class="avatar-wrapper" style="width: 50%; margin-top: 1rem;" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">点击选择头像
+</button> 
+<input name="nickname" type="nickname" class="weui-input" style="width: 42%;height: 2.25rem; font-size: large; padding-inline: 1rem; margin-top: 1rem; border-radius: 5px; border-width: 1px;border-color: black;border-style: double;"  placeholder="点选填入昵称"/>
+<button type="primary" style="margin-top: 2rem;" form-type="submit">确认</button>
+
+</div>
+</form>
