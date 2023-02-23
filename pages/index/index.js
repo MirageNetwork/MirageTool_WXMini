@@ -17,7 +17,7 @@ Page({
   },
   goToAuthPage() {
     wx.navigateTo({
-      url: '../scanAuth/scanAuth?scene=blabla'
+      url: '../scanAuth/scanAuth?scene=blablablablablablablabla'
     })
   },
   onLoad() {

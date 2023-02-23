@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image style="height: 60px;width:180px" src="logo_withname@60.png"></image>
+  <image style="height: 40px;width:120px" src="logo_withname@60.png"></image>
   <text style="margin-top: 2rem; font-size: large; font-weight: bold; color:slategray;">微信小程序扫码登录用户管理器</text>
-  <button bindtap="bindViewTap" style="margin-top: 12rem;" type="default">蜃境用户信息设定</button>
-  <view class="usermotto">
-    <text bindtap="goToAuthPage" class="user-motto">{{motto}}</text>
-  </view>
+  <button bindtap="bindViewTap" style="margin-top: 16rem;" type="default">蜃境用户信息设定</button>
 </view> 

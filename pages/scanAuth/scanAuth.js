@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    stateCode: ""
+    shortStateCode: "",
+    stateCode:""
   },
 
   /**
@@ -15,8 +16,10 @@ Page({
     if (query != undefined) {
       // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
       const stateCode = decodeURIComponent(query.scene)
+      const shortStateCode = stateCode.substring(3,9)
       this.setData({
-        stateCode
+        stateCode,
+        shortStateCode
       })
     }
   },
@@ -49,13 +52,14 @@ Page({
             success: function (res) {
               switch (res.data.Status) {
                 case "OK":
-                  wx.showToast({
+                  wx.showModal({
                     title: '登录成功',
-                    icon: 'success',
-                    duration: 3000
-                  }).then(
-                    wx.exitMiniProgram()
-                  )
+                    content: '您已完成扫码，请等待页面跳转',
+                    showCancel: false,
+                    success(res) {
+                        wx.exitMiniProgram()
+                    }
+                  })
                   break;
                 case "StateExpire":
                   wx.showModal({
